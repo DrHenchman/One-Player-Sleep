@@ -1,5 +1,5 @@
 ##########################################
-# Author: MadCat (youtube.com/MadCatHoG) 
+# Authors: MadCat, DrHenchman 
 # Date: Jun 9, 2017
 # Version: 2.0
 # Minecraft Version 1.13
