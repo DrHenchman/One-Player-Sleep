@@ -11,7 +11,7 @@ tag @a[nbt={Sleeping:1b},gamemode=survival] add isSleeping
 execute if entity @a[tag=isSleeping] run scoreboard players enable @a OPSkickBed 
 scoreboard players add @a[tag=isSleeping] OPSsleep 1
 
-execute as @a[tag=isSleeping,scores={OPSsleep=1}] run tellraw @a ["",{"selector":"@s"},{"text":" is now sleeping","color":"blue","clickEvent":{"action":"run_command","value":"/trigger OPSkickBed set 1"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to kick!","color":"aqua"}]}}}]
+execute as @a[tag=isSleeping,scores={OPSsleep=1}] run tellraw @a ["",{"selector":"@s"},{"text":" is now sleeping. "},{"text":"[Click to wake]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger OPSkickBed set 1"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to stop them sleeping through the night","color":"gray"}]}}}]
 
 # Wait for 100 ticks to allow for Minecraft's regular sleep mechanic a chance (which takes 100 ticks)
 execute as @a[scores={OPSsleep=110..}] run time add 30
