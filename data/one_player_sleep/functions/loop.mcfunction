@@ -20,6 +20,6 @@ execute if entity @a[scores={OPSsleep=200}] run weather thunder 1
 
 execute if entity @a[scores={OPSkickBed=1..}] run function one_player_sleep:kicked
 
-tag @a[tag=isSleeping,nbt={Sleeping:0b}] remove isSleeping
+execute as @a[tag=isSleeping,nbt={Sleeping:0b}] run function one_player_sleep:leave_bed
 scoreboard players set @a[tag=!isSleeping,scores={OPSsleep=1..}] OPSsleep 0
 
