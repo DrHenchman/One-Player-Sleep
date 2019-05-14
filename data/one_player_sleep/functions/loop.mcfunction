@@ -7,7 +7,7 @@
 # One Player Sleep main loop function.
 ##########################################
 
-tag @a[nbt={Sleeping:1b},gamemode=survival] add isSleeping
+tag @a[nbt=!{SleepTimer:0s},gamemode=survival] add isSleeping
 execute if entity @a[tag=isSleeping] run scoreboard players enable @a OPSkickBed 
 scoreboard players add @a[tag=isSleeping] OPSsleep 1
 
@@ -20,6 +20,6 @@ execute if entity @a[scores={OPSsleep=200}] run weather thunder 1
 
 execute if entity @a[scores={OPSkickBed=1..}] run function one_player_sleep:kicked
 
-execute as @a[tag=isSleeping,nbt={Sleeping:0b}] run function one_player_sleep:leave_bed
+execute as @a[tag=isSleeping,nbt={SleepTimer:0s}] run function one_player_sleep:leave_bed
 scoreboard players set @a[tag=!isSleeping,scores={OPSsleep=1..}] OPSsleep 0
 
