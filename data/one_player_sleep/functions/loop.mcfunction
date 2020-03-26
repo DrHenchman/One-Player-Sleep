@@ -7,7 +7,9 @@
 # One Player Sleep main loop function.
 ##########################################
 
-tag @a[nbt=!{SleepTimer:0s},gamemode=survival] add isSleeping
+#Replaced with slept in bed trigger
+tag @a[tag=startSleeping,nbt=!{SleepTimer:0s},gamemode=survival] add isSleeping
+tag @a[tag=startSleeping,tag=isSleeping] remove startSleeping
 execute if entity @a[tag=isSleeping] run scoreboard players enable @a OPSkickBed 
 scoreboard players add @a[tag=isSleeping] OPSsleep 1
 

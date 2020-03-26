@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "sleep_in_bed": {
+            "trigger": "minecraft:slept_in_bed"
+        }
+    },
+    "requirements": [
+        [
+            "sleep_in_bed"
+        ]
+    ],
+    "rewards": {
+        "function": "one_player_sleep:sleep_in_bed"
+    }
+}
